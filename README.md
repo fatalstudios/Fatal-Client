@@ -1,5 +1,4 @@
 *Fatal Client*
-**THIS IS AN OPEN SOURCE CLIENT** based of FDP Client
 
 WHAT IS FATAL CLIENT
 ====================
