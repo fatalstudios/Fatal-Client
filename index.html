@@ -1,1 +1,994 @@
-<h1>Join the discord for more info :D Link in README.md</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatal Client - #1 Minecraft 1.8.9 Cheat Client</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #590000 100%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 15px 0;
+            background: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #FF0000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF0000;
+            text-shadow: 0 0 5px #FF0000;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: 1px solid #FF0000;
+            background: transparent;
+            color: #FF0000;
+            text-decoration: none;
+            border-radius: 3px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background: #FF0000;
+            color: #000000;
+            box-shadow: 0 0 20px #FF0000;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: #FF0000;
+            color: #000000;
+        }
+
+        .btn-primary:hover {
+            background: #590000;
+            color: #FF0000;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+            padding: 60px 0;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .client-logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px #FF0000;
+            animation: pulse 2s infinite;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .client-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 30px #FF0000; }
+            50% { box-shadow: 0 0 50px #FF0000, 0 0 70px #FF0000; }
+            100% { box-shadow: 0 0 30px #FF0000; }
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #FF0000;
+            text-shadow: 0 0 20px #FF0000;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: #ccc;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Client Info Section */
+        .client-info {
+            background: rgba(89, 0, 0, 0.3);
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 1px solid #FF0000;
+            backdrop-filter: blur(5px);
+        }
+
+        .client-info h2 {
+            color: #FF0000;
+            margin-bottom: 20px;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #FF0000;
+        }
+
+        .feature h3 {
+            color: #FF0000;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Payment Area */
+        .payment-area {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #FF0000;
+            margin-bottom: 40px;
+        }
+
+        .payment-area h2 {
+            color: #FF0000;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .price {
+            font-size: 36px;
+            color: #FF0000;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .payment-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        /* Social Buttons */
+        .social-section {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .social-section h2 {
+            color: #FF0000;
+            margin-bottom: 30px;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            border: 2px solid #FF0000;
+            background: rgba(89, 0, 0, 0.3);
+            color: #FF0000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .social-btn:hover {
+            background: #FF0000;
+            color: #000000;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(255, 0, 0, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 2px solid #FF0000;
+            margin-top: 80px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .payment-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Login Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #000000, #590000);
+            margin: 15% auto;
+            padding: 30px;
+            border: 2px solid #FF0000;
+            border-radius: 10px;
+            width: 400px;
+            max-width: 90%;
+        }
+
+        .close {
+            color: #FF0000;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: white;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #FF0000;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid #FF0000;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            box-shadow: 0 0 10px #FF0000;
+        }
+    
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #111;
+            min-width: 140px;
+            box-shadow: 0px 8px 16px 0px rgba(255,0,0,0.2);
+            z-index: 3000;
+            border: 1px solid #FF0000;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            color: #FF0000;
+            padding: 10px 12px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #FF0000;
+            color: black;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="fatal_logo.png" id="clientLogo" alt="Fatal Client Logo" onerror="this.src='fatal_logo.png'"> Fatal Client
+            </div>
+            <div class="nav-buttons">
+                <a href="#info" class="btn">Client Info</a>
+                <a href="https://discord.gg/58DtFJs8M9" class="btn" target="_blank">Discord</a>
+                <a href="https://github.com/fatalstudios/Fatal-Client" class="btn" target="_blank">GitHub</a>
+                <a href="#" class="btn" onclick="openModal()">Login</a>
+                <a href="#" class="btn" onclick="openRegisterModal()">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="client-logo">
+                <img src="fatal_logo.png" id="clientLogo" alt="Fatal Client Logo" onerror="this.src='fatal_logo.png'">
+            </div>
+            <h1>Fatal Client</h1>
+            <p>Fatal Client is the #1 cheat client for Minecraft 1.8.9, offering advanced features, undetectable cheats, and reliable anti-cheat bypass capabilities.</p>
+        </section>
+
+        <section id="info" class="client-info">
+            <h2>Client Information</h2>
+            <p style="text-align: center; font-size: 18px; margin-bottom: 30px;">
+                Get the best Minecraft 1.8.9 cheats with Fatal Client.
+            </p>
+            
+            <div class="features">
+                <div class="feature">
+                    <h3>🛡️ Advanced Anti-Cheat Bypass</h3>
+                    <p>Stay undetected with our sophisticated bypass system that works against all major anti-cheat plugins including Watchdog, AAC, and more.</p>
+                </div>
+                <div class="feature">
+                    <h3>⚡ Performance Optimized</h3>
+                    <p>Lightweight and efficient code ensures smooth gameplay without FPS drops or lag, even with all modules enabled.</p>
+                </div>
+                <div class="feature">
+                    <h3>🎯 Combat Enhancements</h3>
+                    <p>Advanced KillAura, Velocity, AutoClicker, and Reach modules designed specifically for PvP dominance.</p>
+                </div>
+                <div class="feature">
+                    <h3>🔧 Customizable Interface</h3>
+                    <p>Fully customizable GUI with multiple themes, custom keybinds, and an intuitive configuration system.</p>
+                </div>
+                <div class="feature">
+                    <h3>🚀 Regular Updates</h3>
+                    <p>Frequent updates ensure compatibility with the latest server versions and continuous improvement of bypass methods.</p>
+                </div>
+                <div class="feature">
+                    <h3>💬 24/7 Support</h3>
+                    <p>Dedicated support team available around the clock to help with installation, configuration, and troubleshooting.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="payment-area">
+            <h2>Get Fatal Client</h2>
+            <p>Join thousands of satisfied users and dominate your favorite servers!</p>
+            <div class="price">$10</div>
+            <p style="color: #ccc;">Lifetime access • Free updates • 24/7 support</p>
+            <div class="payment-buttons">
+                <a href="#" class="btn btn-primary">💳 Purchase Now</a>
+            </div>
+        </section>
+
+        <section class="social-section">
+            <h2>Join Our Community</h2>
+            <div class="social-buttons">
+                <a href="https://discord.gg/58DtFJs8M9" class="social-btn" target="_blank">
+                    <span>💬</span> Discord Server
+                </a>
+                <a href="https://github.com/fatalstudios/Fatal-Client" class="social-btn" target="_blank">
+                    <span>📂</span> GitHub Repository
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Fatal Client. All rights reserved.</p>
+            <p style="margin-top: 10px; color: #666;">For educational purposes only. Use responsibly.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <h2 style="color: #FF0000; margin-bottom: 20px;">Login to Fatal Client</h2>
+            <form>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegisterModal()">×</span>
+            <h2 style="color: #FF0000; margin-bottom: 20px;">Register for Fatal Client</h2>
+            <form>
+                <div class="form-group">
+                    <label for="reg-username">Username:</label>
+                    <input type="text" id="reg-username" name="reg-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email:</label>
+                    <input type="email" id="reg-email" name="reg-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Password:</label>
+                    <input type="password" id="reg-password" name="reg-password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Error handling for undefined emit errors
+        window.addEventListener('error', function(event) {
+            if (event.error && event.error.message && event.error.message.includes('emit')) {
+                console.warn('Emit error caught and handled:', event.error.message);
+                event.preventDefault();
+                return false;
+            }
+        });
+
+        // Defensive check for undefined objects that might have emit methods
+        function safeEmit(obj, event, ...args) {
+            try {
+                if (obj && typeof obj.emit === 'function') {
+                    return obj.emit(event, ...args);
+                }
+            } catch (error) {
+                console.warn('Safe emit caught error:', error.message);
+            }
+            return false;
+        }
+
+        // Override common emit-related globals if they exist but are undefined
+        if (typeof EventEmitter !== 'undefined' && !EventEmitter.prototype.emit) {
+            EventEmitter.prototype.emit = function() {
+                console.warn('EventEmitter emit called but not properly initialized');
+                return false;
+            };
+        }
+
+        function openModal() {
+            document.getElementById('loginModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('loginModal').style.display = 'none';
+        }
+
+        
+        function openRegisterModal() {
+            document.getElementById('registerModal').style.display = 'block';
+        }
+
+        function closeRegisterModal() {
+            document.getElementById('registerModal').style.display = 'none';
+        }
+
+        
+        
+        // Persistent login using localStorage
+        if (localStorage.getItem("fatal_logged_in") === "true") {
+            loggedIn = true;
+        }
+        if (localStorage.getItem("fatal_username")) {
+            username = localStorage.getItem("fatal_username");
+        }
+
+        function logout() {
+            loggedIn = false;
+            username = "";
+            localStorage.removeItem("fatal_logged_in");
+            localStorage.removeItem("fatal_username");
+            updateAuthButtons();
+        }
+
+        function saveLogin(name) {
+            loggedIn = true;
+            username = name;
+            localStorage.setItem("fatal_logged_in", "true");
+            localStorage.setItem("fatal_username", name);
+        }
+
+        let username = "";
+
+        document.querySelector("#loginModal form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const uname = document.getElementById("username").value;
+            saveLogin(uname);
+            closeModal();
+            updateAuthButtons();
+        });
+
+        document.querySelector("#registerModal form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const uname = document.getElementById("reg-username").value;
+            saveLogin(uname);
+            closeRegisterModal();
+            updateAuthButtons();
+        });
+
+        function updateAuthButtons() {
+            const nav = document.querySelector(".nav-buttons");
+            nav.innerHTML = "";
+
+            nav.innerHTML += '<a href="#info" class="btn">Client Info</a>';
+            nav.innerHTML += '<a href="https://discord.gg/58DtFJs8M9" class="btn" target="_blank">Discord</a>';
+            nav.innerHTML += '<a href="https://github.com/fatalstudios/Fatal-Client" class="btn" target="_blank">GitHub</a>';
+
+            if (loggedIn) {
+                nav.innerHTML += `
+                    <div class="dropdown">
+                        <button class="btn">👤 ${username || "Profile"} ▼</button>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="openProfileModal()">Settings</a>
+                            <a href="#" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                `;
+            } else {
+                nav.innerHTML += '<a href="#" class="btn" onclick="openModal()">Login</a>';
+                nav.innerHTML += '<a href="#" class="btn" onclick="openRegisterModal()">Register</a>';
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", updateAuthButtons);
+
+
+        
+        let loggedIn = false;
+
+        document.querySelector("#loginModal form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            loggedIn = true;
+            closeModal();
+            updateAuthButtons();
+        });
+
+        document.querySelector("#registerModal form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            loggedIn = true;
+            closeRegisterModal();
+            updateAuthButtons();
+        });
+
+        function logout() {
+            loggedIn = false;
+            updateAuthButtons();
+        }
+
+        function updateAuthButtons() {
+            const nav = document.querySelector(".nav-buttons");
+            nav.innerHTML = "";
+
+            nav.innerHTML += '<a href="#info" class="btn">Client Info</a>';
+            nav.innerHTML += '<a href="https://discord.gg/58DtFJs8M9" class="btn" target="_blank">Discord</a>';
+            nav.innerHTML += '<a href="https://github.com/fatalstudios/Fatal-Client" class="btn" target="_blank">GitHub</a>';
+
+            if (loggedIn) {
+                nav.innerHTML += `
+                    <div class="dropdown">
+                        <button class="btn">Profile ▼</button>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                `;
+            } else {
+                nav.innerHTML += '<a href="#" class="btn" onclick="openModal()">Login</a>';
+                nav.innerHTML += '<a href="#" class="btn" onclick="openRegisterModal()">Register</a>';
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", updateAuthButtons);
+
+        
+        
+        
+        function openProfileModal() {
+            const modal = document.getElementById("profileModal");
+            document.getElementById("profile-username").value = username || "";
+            document.getElementById("profile-password").value = "";
+            modal.style.display = "block";
+        }
+
+        function closeProfileModal() {
+            document.getElementById("profileModal").style.display = "none";
+        }
+
+        document.getElementById("profileForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const newName = document.getElementById("profile-username").value;
+            username = newName;
+            localStorage.setItem("fatal_username", newName);
+
+            const password = document.getElementById("profile-password").value;
+            if (password) {
+                alert("Password reset is simulated for now.");
+            }
+
+            const file = document.getElementById("profile-avatar").files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imgData = e.target.result;
+                    localStorage.setItem("fatal_avatar", imgData);
+                    updateAvatarDisplay(imgData);
+                };
+                reader.readAsDataURL(file);
+            } else {
+                updateAuthButtons();
+            }
+
+            closeProfileModal();
+        });
+
+        function updateAvatarDisplay(dataUrl) {
+            const logos = document.querySelectorAll("#clientLogo");
+            logos.forEach(logo => {
+                if (dataUrl && logo) {
+                    logo.src = dataUrl;
+                }
+            });
+            updateAuthButtons();
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (localStorage.getItem("fatal_logged_in") === "true") {
+                loggedIn = true;
+            }
+            if (localStorage.getItem("fatal_username")) {
+                username = localStorage.getItem("fatal_username");
+            }
+            const avatarData = localStorage.getItem("fatal_avatar");
+            if (avatarData) {
+                updateAvatarDisplay(avatarData);
+            }
+            updateAuthButtons();
+        });
+ {
+            const modal = document.getElementById("profileModal");
+            document.getElementById("profile-username").value = username || "";
+            modal.style.display = "block";
+        }
+
+        function closeProfileModal() {
+            document.getElementById("profileModal").style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const loginModal = document.getElementById('loginModal');
+            const registerModal = document.getElementById('registerModal');
+            if (event.target == loginModal) {
+                loginModal.style.display = 'none';
+            }
+            if (event.target == registerModal) {
+                registerModal.style.display = 'none';
+            }
+            const profileModal = document.getElementById('profileModal');
+            if (event.target == profileModal) {
+                profileModal.style.display = 'none';
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Additional protection against emit errors
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for any objects that might be causing emit errors
+            const potentialEmitters = [window.process, window.require, window.module];
+            potentialEmitters.forEach(obj => {
+                if (obj && typeof obj === 'object' && !obj.emit) {
+                    obj.emit = function() {
+                        console.warn('Prevented undefined emit call');
+                        return false;
+                    };
+                }
+            });
+        });
+
+        // Catch unhandled promise rejections that might involve emit
+        window.addEventListener('unhandledrejection', function(event) {
+            if (event.reason && event.reason.message && event.reason.message.includes('emit')) {
+                console.warn('Unhandled promise rejection with emit error caught:', event.reason.message);
+                event.preventDefault();
+            }
+        });
+    
+        const API_BASE = "http://localhost:5000/api"; // Change if deployed
+
+        async function apiRegister(username, password) {
+            const res = await fetch(`${API_BASE}/register`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ username, password })
+            });
+            return res.json();
+        }
+
+        async function apiLogin(username, password) {
+            const res = await fetch(`${API_BASE}/login`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ username, password })
+            });
+            return res.json();
+        }
+
+        async function apiGetProfile(username) {
+            const res = await fetch(`${API_BASE}/profile/${username}`);
+            return res.json();
+        }
+
+        async function apiUpdateProfile(username, updates) {
+            const res = await fetch(`${API_BASE}/profile/${username}`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(updates)
+            });
+            return res.json();
+        }
+
+        async function uploadToCloudinary(file) {
+            const formData = new FormData();
+            formData.append("file", file);
+            formData.append("upload_preset", "YOUR_UPLOAD_PRESET"); // replace this with your Cloudinary upload preset
+
+            const res = await fetch("https://api.cloudinary.com/v1_1/YOUR_CLOUD_NAME/image/upload", {
+                method: "POST",
+                body: formData
+            });
+            const data = await res.json();
+            return data.secure_url;
+        }
+
+        // Replace login logic with backend check
+        document.querySelector("#loginModal form").addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const uname = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+            const result = await apiLogin(uname, pass);
+            if (result.message) {
+                saveLogin(uname);
+                closeModal();
+                loadProfileFromBackend();
+            } else {
+                alert(result.error || "Login failed");
+            }
+        });
+
+        // Replace register logic with backend call
+        document.querySelector("#registerModal form").addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const uname = document.getElementById("reg-username").value;
+            const pass = document.getElementById("reg-password").value;
+            const result = await apiRegister(uname, pass);
+            if (result.message) {
+                saveLogin(uname);
+                closeRegisterModal();
+                loadProfileFromBackend();
+            } else {
+                alert(result.error || "Registration failed");
+            }
+        });
+
+        // Profile form submit with avatar upload
+        document.getElementById("profileForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const email = document.getElementById("profile-email").value;
+            const bio = document.getElementById("profile-bio").value;
+            const pass = document.getElementById("profile-password").value;
+            const file = document.getElementById("profile-avatar").files[0];
+
+            const updates = { email, bio };
+            if (pass) updates.password = pass;
+
+            if (file) {
+                const avatarURL = await uploadToCloudinary(file);
+                updates.avatar_url = avatarURL;
+                localStorage.setItem("fatal_avatar", avatarURL);
+                updateAvatarDisplay(avatarURL);
+            }
+
+            await apiUpdateProfile(username, updates);
+            localStorage.setItem("fatal_email", email);
+            localStorage.setItem("fatal_bio", bio);
+            closeProfileModal();
+        });
+
+        async function loadProfileFromBackend() {
+            const profile = await apiGetProfile(username);
+            if (profile) {
+                localStorage.setItem("fatal_email", profile.email || "");
+                localStorage.setItem("fatal_bio", profile.bio || "");
+                if (profile.avatar_url) {
+                    localStorage.setItem("fatal_avatar", profile.avatar_url);
+                    updateAvatarDisplay(profile.avatar_url);
+                }
+                updateAuthButtons();
+            }
+        }
+
+    
+  // Show download button if user is logged in
+  document.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem("fatal_logged_in") === "true") {
+      const dl = document.getElementById("downloadSection");
+      if (dl) dl.style.display = "block";
+    }
+  });
+</script>
+
+
+
+<!-- Profile Settings Modal -->
+<div id="profileModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProfileModal()">×</span>
+        <h2 style="color: #FF0000; margin-bottom: 20px;">Profile Settings</h2>
+        <form id="profileForm">
+            <div class="form-group">
+                <label for="profile-username">Username:</label>
+                <input type="text" id="profile-username" name="profile-username" required>
+            </div>
+            <div class="form-group">
+                <label for="profile-email">Email:</label>
+    <input type="email" id="profile-email" name="profile-email" required>
+
+    <label for="profile-bio">Bio:</label>
+    <textarea id="profile-bio" name="profile-bio" rows="3" style="width:100%; padding:10px; background: rgba(0,0,0,0.7); border: 1px solid #FF0000; border-radius:5px; color:white;"></textarea>
+
+    <label for="profile-avatar">Avatar:</label>
+                <input type="file" id="profile-avatar" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label for="profile-password">Reset Password:</label>
+                <input type="password" id="profile-password" placeholder="New password (not saved)">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+<div style="text-align: center; margin: 30px auto;">
+  <h2 style="color: #FF0000;">You must pay $10 to use this client</h2>
+  
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" onsubmit="setTimeout(function(){ window.location='thank_you.html'; }, 2000);">
+  <input type="hidden" name="cmd" value="_xclick">
+  <input type="hidden" name="business" value="fatalclient@proton.me">
+  <input type="hidden" name="item_name" value="Fatal Client Access">
+  <input type="hidden" name="amount" value="10.00">
+  <input type="hidden" name="currency_code" value="USD">
+  <input type="submit" value="Pay $10 with PayPal"
+    style="padding:12px 24px; font-size:18px; background:#FF0000; color:white; font-weight:bold; border:none; border-radius:6px; cursor:pointer;">
+</form>
+
+</div>
+
+
+<div id="downloadSection" style="text-align: center; margin-top: 40px; display: none;">
+  <a href="fatalclient_setup.zip" download
+     style="padding: 12px 24px; background: limegreen; color: white; font-weight: bold; border: none; border-radius: 5px; text-decoration: none;">
+    Download Fatal Client
+  </a>
+</div>
+
+</body>
+</html>
